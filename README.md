@@ -1,1 +1,1 @@
-Etch-a-sketch game by FestiveChicken
+Etch-a-sketch game
