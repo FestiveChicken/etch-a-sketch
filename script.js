@@ -1,18 +1,26 @@
 const gridContainer = document.querySelector('.container');
 const clearBoard = document.querySelector('#clearBoard');
-const column = document.querySelectorAll('.container > div')
+let slider = document.getElementById('myRange')
+let outputOne = document.getElementById("outputOne");
+let outputTwo = document.getElementById("outputTwo");
 let userSlider = 16;
 
 //Reloads the grid when slider is changed
 document.querySelector('input')
     .addEventListener('input', event => {
-        userSlider = event.target.value
+        slider = event.target.value
         reloadGrid()
 });
 
-//When hovereing over squares they turn white
+//Shows slider value on page
+slider.oninput = function() {
+    outputOne.innerHTML = this.value;
+    outputTwo.innerHTML = this.value
+  }
+
+//When hovereing over squares they turn black
 gridContainer.addEventListener("mouseover", (event) => {
-    event.target.style.backgroundColor = "white"
+    event.target.style.backgroundColor = "black"
 });
 
 //When clicking clear the board reloads
@@ -20,11 +28,17 @@ clearBoard.onclick = () => reloadGrid();
 
 //Creates 16 by 16 square
 function setupGrid() {
-    const cellCount = userSlider * userSlider;
+    const cellCount = slider;
     for (let i = 0; i < cellCount; i++) {
         const cell = document.createElement('div');
         gridContainer.appendChild(cell);
-}};
+        let allColumns = document.querySelectorAll('.container div');
+        let lastColumn = allColumns[allColumns.length - 1];
+        for (let j = 0; j < cellCount; j++) {
+            lastColumn.appendChild(document.createElement('div'));
+        }
+    }
+};
 
 
 //Grid turns into empty space
@@ -39,4 +53,9 @@ function reloadGrid() {
     setupGrid()
 };
 
+//Initilizes grid
 setupGrid();
+
+//Displays default slider value
+outputOne.innerHTML = slider.value;
+outputTwo.innerHTML = slider.value

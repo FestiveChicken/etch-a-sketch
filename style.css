@@ -1,4 +1,5 @@
 html, body {
+    background-color: grey;
     height: 100%;
     margin: 0px;
 }
@@ -13,15 +14,16 @@ button {
     margin-right: auto;
     margin-top: 50px;
     display: flex;
-    background-color: white;
-    border-color: black;
+    background-color: grey;
+    border-color: white;
+    border: 4px;
     border-style: solid;
     border-radius: 12px;
 }
 .container {
+    background-color: black;
     display:flex;
     flex-wrap: wrap;
-    flex-direction: column;
     margin: auto;
     padding: 10px;
     border-style: solid;
@@ -31,20 +33,22 @@ button {
 }
 
 .container div {
-    background-color: black;
+    background-color: white;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     flex-grow: 1;
     flex-shrink: 1;
 }
 
 .container div div {
-    background-color: black;
+    background-color: white;
     display: flex;
     flex-wrap: wrap;
     flex-grow: 1;
     flex-shrink: 1;
 }
+
 .slidecontainer {
     display: flex;
     justify-content: center;
@@ -53,13 +57,11 @@ button {
     width: 100%; /* Width of the outside container */
   }
   
-  .slider {
+.slider {
+    fill: black;
     width: 200px;
     height: 25px;
     background: grey;
   }
 
-  .container div div {
-    color: white;
-    text-align: center;
-  }
+  
