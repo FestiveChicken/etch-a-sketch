@@ -21,20 +21,30 @@ button {
 .container {
     display:flex;
     flex-wrap: wrap;
+    flex-direction: column;
     margin: auto;
     padding: 10px;
     border-style: solid;
     border-radius: 12px;
-    height: 50%;
-    width: 489px;
+    height: 450px;
+    width: 450px;
 }
 
 .container div {
     background-color: black;
-    height: 6.25%;
-    width: 6.25%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    flex-shrink: 1;
 }
 
+.container div div {
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
 .slidecontainer {
     display: flex;
     justify-content: center;
@@ -47,4 +57,9 @@ button {
     width: 200px;
     height: 25px;
     background: grey;
+  }
+
+  .container div div {
+    color: white;
+    text-align: center;
   }
