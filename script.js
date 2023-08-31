@@ -3,7 +3,6 @@ const clearBoard = document.querySelector('#clearBoard');
 let slider = document.getElementById('myRange')
 let outputOne = document.getElementById("outputOne");
 let outputTwo = document.getElementById("outputTwo");
-let userSlider = 16;
 
 //Reloads the grid when slider is changed
 document.querySelector('input')
@@ -54,8 +53,8 @@ function reloadGrid() {
 };
 
 //Initilizes grid
-setupGrid();
+setupGrid(slider = 16);
 
 //Displays default slider value
-outputOne.innerHTML = slider.value;
-outputTwo.innerHTML = slider.value
+outputOne.innerHTML = 16;
+outputTwo.innerHTML = 16;
