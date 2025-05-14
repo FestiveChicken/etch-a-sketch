@@ -4,7 +4,6 @@ A browser-based drawing board that lets you “etch” colorful sketches by hove
 
 ## 🔗 Live Demo  
 [Try it out here](https://festivechicken.github.io/etch-a-sketch/)  
-*(Update or remove if not deployed yet.)*
 
 ## 🛠️ Features
 - **Dynamic Grid**: default 16×16 cells, customizable size via user prompt  
